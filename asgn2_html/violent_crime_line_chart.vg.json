@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Violent Crime In US From 2001 To 2016",
+    "data": {"url": "violent_crime_2001to2016.csv"},
+    "width": 400,
+    "height": 300,
+    "encoding": {"x": {"field": "year", "type": "temporal"}},
+    "layer": [
+      {
+        "encoding": {
+          "color": {"field": "crime_type", "type": "nominal"},
+          "y": {"field": "total", "type": "quantitative"}
+        },
+        "layer": [
+          {"mark": "line"},
+          {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+        ]
+      },
+      {
+        "transform": [{"pivot": "crime_type", "value": "total", "groupby": ["year"]}],
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {"value": 0.3, "param": "hover", "empty": false},
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "murder_manslaughter", "type": "quantitative"},
+            {"field": "rape_legacy", "type": "quantitative"},
+            {"field": "robbery", "type": "quantitative"},
+            {"field": "agg_assault", "type": "quantitative"}
+          ]
+        },
+        "params": [{
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["year"],
+            "nearest": true,
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }]
+      }
+    ]
+  }

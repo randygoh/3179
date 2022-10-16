@@ -1,0 +1,47 @@
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "The violent crime and property crime per state in 2016",
+    "repeat": {"row": ["violent_crime_total", "property_crime_total"]},
+    "resolve": {
+      "scale": {
+        "color": "independent"
+      }
+    },
+      "spec": {
+      "width": 500,
+      "height": 300,
+      "data": {
+        "url": "2016.csv"
+  },
+  "transform": [
+    {
+      "lookup": "id",
+      "from": {
+        "data": {
+          "url": "ne_110m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        },
+        "key": "id"
+      },
+      "as": "geo"
+    }
+  ],
+  "projection": {"type": "albersUsa"},
+  "mark": "geoshape",
+  "encoding": {
+    "shape": {
+      "field": "geo",
+      "type": "geojson"
+    },
+    "color":{
+      "scale": {"scheme": "lightgreyred"},
+      "field": {"repeat": "row"},
+      "type": "quantitative"
+      }
+    }
+  }
+}
