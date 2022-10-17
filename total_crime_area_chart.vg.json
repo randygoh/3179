@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 110,
+    "height": 60,
+    "data": {"url": "total_crime_2001to2016.csv"},
+    "mark": {"type": "area", "tooltip":true, "color": "indianred"},
+    "encoding": {
+      "x": {
+        "timeUnit": "year", "field": "year",
+        "axis": {"domain": false, "grid": false, "ticks": false, "title":null}
+      },
+      "y": {
+        "aggregate":"sum", "field": "total_crime",
+        "title": "total crime",
+        "axis": {"domain": false, "grid": false, "ticks": false, "labels": false, "title":null}
+      }
+    },
+    "config": {
+        "view": {
+           "stroke": "transparent"
+        },
+        "background": "transparent"
+      }
+  }
