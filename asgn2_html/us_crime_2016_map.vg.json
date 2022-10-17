@@ -1,7 +1,11 @@
 
   {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "The violent crime and property crime per state in 2016",
+    "title": {
+      "text": "Violent Crime And Property Crime In US 2016",
+      "fontSize": 15,
+      "color":"black"
+  },
     "repeat": {"row": ["violent_crime_total", "property_crime_total"]},
     "resolve": {
       "scale": {
@@ -43,5 +47,11 @@
       "type": "quantitative"
       }
     }
+  },
+  "config": {
+    "view": {
+       "stroke": "transparent"
+    },
+    "background": "transparent"
   }
 }

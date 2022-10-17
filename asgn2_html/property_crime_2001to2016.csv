@@ -1,0 +1,49 @@
+crime_type,year,total
+burglary,2001,2111582
+burglary,2002,2146082
+burglary,2003,2150163
+burglary,2004,2140500
+burglary,2005,2151871
+burglary,2006,2191158
+burglary,2007,2186272
+burglary,2008,2225099
+burglary,2009,2199617
+burglary,2010,2164226
+burglary,2011,2181290
+burglary,2012,2106413
+burglary,2013,1928519
+burglary,2014,1726340
+burglary,2015,1532280
+burglary,2016,1514044
+larceny,2001,7069954
+larceny,2002,7035671
+larceny,2003,7008683
+larceny,2004,6922547
+larceny,2005,6768611
+larceny,2006,6610455
+larceny,2007,6574152
+larceny,2008,6566248
+larceny,2009,6318828
+larceny,2010,6185087
+larceny,2011,6129748
+larceny,2012,6145299
+larceny,2013,5994085
+larceny,2014,5831598
+larceny,2015,5423206
+larceny,2016,5617746
+vehicle theft,2001,1220421
+vehicle theft,2002,1237047
+vehicle theft,2003,1251320
+vehicle theft,2004,1229443
+vehicle theft,2005,1228139
+vehicle theft,2006,1190924
+vehicle theft,2007,1092866
+vehicle theft,2008,952594
+vehicle theft,2009,790120
+vehicle theft,2010,734510
+vehicle theft,2011,712051
+vehicle theft,2012,719523
+vehicle theft,2013,697060
+vehicle theft,2014,685744
+vehicle theft,2015,689181
+vehicle theft,2016,764363

@@ -1,6 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A simple radial chart with embedded data.",
+    "title": {
+      "text": "Crime Distribution In US 2016",
+      "fontSize": 15,
+      "color":"black"
+    },
+    "width": 400,
+    "height": 250,
     "data": {
         "values": [
             {"category": "Larceny", "value": 61.24},
@@ -20,6 +27,12 @@
       "theta": {"field": "value", "type": "quantitative", "stack": true},
       "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
       "color": {"field": "category", "type": "nominal"}
+    },
+    "config": {
+      "view": {
+         "stroke": "transparent"
+      },
+      "background": "transparent"
     }
   }
 

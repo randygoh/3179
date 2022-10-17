@@ -1,0 +1,89 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Property Crime In US From 2001 To 2016",
+        "fontSize": 15,
+        "color":"black"
+    },
+    "data": {
+      "url": "property_crime_2001to2016.csv"
+    },
+    "width": 400,
+    "height": 200,
+    "layer": [
+      {
+        "encoding": {
+          "x": {"field": "year", "type": "temporal"},
+          "y": {"field": "total", "type": "quantitative"},
+          "color": {"field": "crime_type", "type": "nominal"}
+        },
+        "layer": [
+          {"mark": "line"},
+          {
+            "params": [{
+              "name": "label",
+              "select": {
+                "type": "point",
+                "encodings": ["x"],
+                "nearest": true,
+                "on": "mouseover"
+              }
+            }],
+            "mark": "point",
+            "encoding": {
+              "opacity": {
+                "condition": {
+                  "param": "label",
+                  "empty": false,
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "transform": [{"filter": {"param": "label", "empty": false}}],
+        "layer": [
+          {
+            "mark": {"type": "rule", "color": "gray"},
+            "encoding": {
+              "x": {"type": "temporal", "field": "year"}
+            }
+          },
+          {
+            "encoding": {
+              "text": {"type": "quantitative", "field": "total"},
+              "x": {"type": "temporal", "field": "year"},
+              "y": {"type": "quantitative", "field": "total"}
+            },
+            "layer": [
+              {
+                "mark": {
+                  "type": "text",
+                  "stroke": "white",
+                  "strokeWidth": 2,
+                  "align": "left",
+                  "dx": 5,
+                  "dy": -5
+                }
+              },
+              {
+                "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+                "encoding": {
+                  "color": {"type": "nominal", "field": "crime_type"}
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "config": {
+        "view": {
+           "stroke": "transparent"
+        },
+        "background": "transparent"
+      }
+  }

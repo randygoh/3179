@@ -1,9 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Violent Crime In US From 2001 To 2016",
+    "title": {
+      "text": "Violent Crime In US From 2001 To 2016",
+      "fontSize": 15,
+      "color":"black"
+  },
     "data": {"url": "violent_crime_2001to2016.csv"},
     "width": 400,
-    "height": 300,
+    "height": 200,
     "encoding": {"x": {"field": "year", "type": "temporal"}},
     "layer": [
       {
@@ -42,5 +46,11 @@
           }
         }]
       }
-    ]
+    ],
+    "config": {
+      "view": {
+         "stroke": "transparent"
+      },
+      "background": "transparent"
+    }
   }

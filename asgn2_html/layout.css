@@ -1,13 +1,15 @@
 html, body{
-    background-color: #ffffffff;
+    background-color: rgb(240, 240, 240);
 }
 
-.pure-u-1 img{
+.pure-u-1 {
     width: 100vw;
-    height: 50vw;
+    height: 5vw;
+    text-align: center;
 }
 
 .pure-u-1-2 {
     margin-top: 30px;
-    height: 100vw;
+    height: 50vw;
 }
+

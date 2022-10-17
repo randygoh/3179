@@ -1,13 +1,48 @@
 /* Selectors in HTML */
-.title_text {
-    color: #d13141
+.color_text {
+    color: #b82937;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.orange_text {
+    color: #d3561c;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.bold_text {
+    font-weight: bold;
 }
 
 h1 {
     font-family: 'Roboto';
     font-weight: bold;
+    font-size:40px
 }
 
 p {
     font-family: 'Roboto';
+}
+
+p1 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p2 {
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: bold;
+}
+
+p3 {
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+p4 {
+    font-family: 'Roboto';
+    font-size: 16px;
 }
