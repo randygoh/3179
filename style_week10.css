@@ -1,0 +1,13 @@
+/* Selectors in HTML */
+.title_text {
+    color: #d13141
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto';
+}
